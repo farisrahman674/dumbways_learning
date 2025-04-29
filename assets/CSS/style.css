@@ -1,3 +1,4 @@
+/* Bagian body dan Background CV */
 body {
   display: flex;
   margin: 5% 15%;
@@ -10,11 +11,14 @@ body {
   height: 5%;
   padding: 50px;
 }
+
+/* article*/
 article {
   text-align: justify;
   margin-top: 20px;
 }
 
+/* button */
 .btn-dark {
   border-radius: 50px;
   margin-top: 20px;
@@ -22,6 +26,12 @@ article {
   width: 100px;
 }
 
+/* Social_Media */
+.social_media {
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+}
 a {
   display: flex;
   text-decoration: none;
@@ -31,21 +41,25 @@ a {
   height: 40px;
 }
 
+/* Card */
 .card {
   margin-top: 40px;
+}
+.card p {
+  font-size: 13px;
+}
+.card h5 {
+  font-size: 20px;
 }
 ul {
   list-style-type: none;
 }
 
-.social_media {
-  display: flex;
-  justify-content: center;
-  padding-left: 20px;
-}
 .card_Text {
   text-align: center;
 }
+
+/* Footer */
 footer {
   margin-top: 40px;
   text-align: center;
