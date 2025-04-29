@@ -1,9 +1,15 @@
 body {
   display: flex;
-  margin: 5% 20%;
+  margin: 5% 15%;
   flex-direction: column;
+  background-color: #e0e4e8;
 }
-
+.CV {
+  background-color: white;
+  width: 105%;
+  height: 5%;
+  padding: 50px;
+}
 article {
   text-align: justify;
   margin-top: 20px;
