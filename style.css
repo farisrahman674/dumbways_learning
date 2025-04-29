@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  margin: 5% 20%;
+  flex-direction: column;
+}
+
+article {
+  text-align: justify;
+  margin-top: 20px;
+}
+
+.btn-dark {
+  border-radius: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 100px;
+}
+
+a {
+  display: flex;
+  text-decoration: none;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.card {
+  margin-top: 40px;
+}
+ul {
+  list-style-type: none;
+}
+
+.social_media {
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+}
+.card_Text {
+  text-align: center;
+}
+footer {
+  margin-top: 40px;
+  text-align: center;
+}
