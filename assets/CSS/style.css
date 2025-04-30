@@ -1,66 +1,236 @@
-/* Bagian body dan Background CV */
-body {
-  display: flex;
-  margin: 5% 15%;
-  flex-direction: column;
-  background-color: #e0e4e8;
-}
-.CV {
-  background-color: white;
-  width: 105%;
-  height: 5%;
-  padding: 50px;
+@media (min-width: 945px) {
+  /* Bagian body dan Background CV */
+  body {
+    display: flex;
+
+    flex-direction: column;
+    background-color: #e0e4e8;
+  }
+  /* navbar */
+  .container-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    height: 70px;
+  }
+  .navbar {
+    margin-left: 90px;
+  }
+  .navbar h2 {
+    padding-top: 5px;
+    font-size: 25px;
+  }
+  .navbar h6 {
+    padding-top: 10px;
+    font-size: 20px;
+  }
+  .navbar img {
+    width: 70px;
+    height: 40px;
+  }
+  .list-group {
+    gap: 4rem;
+  }
+  .container-navbar .btn-dark {
+    width: 150px;
+    height: 50px;
+    margin-right: 20px;
+  }
+
+  /* CV */
+  .CV {
+    background-color: white;
+    margin: 5% 15%;
+    width: 70%;
+    height: 5%;
+    padding: 50px;
+  }
+
+  /* article*/
+  .content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .main-left {
+    flex: 2;
+  }
+
+  .main-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  article {
+    text-align: justify;
+    margin-top: 20px;
+  }
+
+  /* download */
+  .download {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  .download p {
+    padding-left: 30px;
+  }
+
+  /* button */
+  .download .btn-dark {
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100px;
+  }
+
+  /* Social_Media */
+  ul {
+    list-style-type: none;
+  }
+  .social_media {
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+  }
+  a {
+    display: flex;
+    text-decoration: none;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Card */
+  .card {
+    margin-top: 40px;
+  }
+  .card p {
+    font-size: 13px;
+  }
+  .card h5 {
+    font-size: 20px;
+  }
+
+  .card_Text {
+    text-align: center;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 40px;
+    text-align: center;
+  }
 }
 
-/* article*/
-article {
-  text-align: justify;
-  margin-top: 20px;
-}
+@media (max-width: 945px) {
+  /* Bagian body dan Background CV */
+  body {
+    display: flex;
 
-/* button */
-.btn-dark {
-  border-radius: 50px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  width: 100px;
-}
+    flex-direction: column;
+    background-color: #e0e4e8;
+  }
+  /* navbar */
+  .container-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    height: 70px;
+  }
+  .list-group {
+    gap: 2rem;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-fluid {
+    margin-top: 10px;
+  }
+  .navbar h2 {
+    padding-top: 5px;
+    font-size: 25px;
+  }
+  .navbar h6 {
+    padding-top: 10px;
+    font-size: 20px;
+  }
+  .navbar img {
+    width: 70px;
+    height: 40px;
+  }
+  .CV {
+    background-color: white;
+    margin: 5% 15%;
+    width: 70%;
+    height: 5%;
+    padding: 50px;
+  }
 
-/* Social_Media */
-.social_media {
-  display: flex;
-  justify-content: center;
-  padding-left: 20px;
-}
-a {
-  display: flex;
-  text-decoration: none;
-}
-.icon {
-  width: 40px;
-  height: 40px;
-}
+  /* article*/
+  article {
+    text-align: justify;
+    margin-top: 20px;
+  }
 
-/* Card */
-.card {
-  margin-top: 40px;
-}
-.card p {
-  font-size: 13px;
-}
-.card h5 {
-  font-size: 20px;
-}
-ul {
-  list-style-type: none;
-}
+  /* download */
+  .download {
+    margin-top: 20px;
+  }
+  .download p {
+    padding-top: 20px;
+  }
+  /* button */
+  .download .btn-dark {
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100px;
+  }
 
-.card_Text {
-  text-align: center;
-}
+  /* Social_Media */
+  .social_media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-left: 20px;
+  }
+  a {
+    display: flex;
+    text-decoration: none;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
 
-/* Footer */
-footer {
-  margin-top: 40px;
-  text-align: center;
+  /* Card */
+  .card {
+    margin-top: 40px;
+  }
+  .card p {
+    font-size: 13px;
+  }
+  .card h5 {
+    font-size: 20px;
+  }
+  ul {
+    list-style-type: none;
+  }
+
+  .card_Text {
+    text-align: center;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 40px;
+    text-align: center;
+  }
 }
