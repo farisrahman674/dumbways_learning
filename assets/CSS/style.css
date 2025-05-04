@@ -67,8 +67,12 @@ article {
   }
   .container-navbar .btn-dark {
     width: 150px;
-    height: 50px;
+    height: 40px;
     margin-right: 70px;
+  }
+  .container-navbar span {
+    display: inline-block;
+    margin-bottom: 3px;
   }
 
   /* CV */
@@ -204,4 +208,7 @@ article {
 .form-container span {
   display: inline-block;
   margin-bottom: 3px;
+}
+.form-select:hover {
+  cursor: pointer;
 }
