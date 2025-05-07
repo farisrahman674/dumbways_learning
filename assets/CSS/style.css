@@ -212,3 +212,91 @@ article {
 .form-select:hover {
   cursor: pointer;
 }
+
+/* My Project */
+.countdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.startDate {
+  flex: 1;
+  padding-right: 5px;
+}
+.endDate {
+  flex: 1;
+  padding-left: 5px;
+}
+.fourSelect {
+  margin-top: 20px;
+}
+.fourSelect span {
+  padding-left: 10px;
+}
+.fourSelect #Checkbox2 {
+  margin-left: 50px;
+}
+.fourSelectDown {
+  margin-top: 10px;
+}
+.fourSelectDown span {
+  padding-left: 10px;
+}
+.fourSelectDown #Checkbox4 {
+  margin-left: 50px;
+}
+
+/* Card My Project */
+.containerMyProject {
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  width: 100%;
+  background-color: white;
+}
+.containerMyProject h1 {
+  text-align: center;
+  padding: 50px 0px;
+}
+.card-img-top {
+  border-radius: 15px;
+  margin: 10px 5px 0px;
+  width: 250px;
+}
+.card-body h5 {
+  margin-top: 5px;
+  font-size: 15px;
+}
+.card-body p {
+  margin-top: -7px;
+  color: grey;
+}
+.card span {
+  text-align: justify;
+  font-size: 12px;
+}
+.containerCardProject {
+  display: flex;
+  width: 80%;
+}
+.cardMyProject {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.cardMyProjectIcon {
+  width: 25px;
+  height: 25px;
+}
+.container-Button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.btn-cardMyProjectEdit {
+  height: fit-content;
+  width: 125px;
+}
+.btn-cardMyProjectDelete {
+  height: fit-content;
+  width: 125px;
+}

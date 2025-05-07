@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/CSS/style.css" />
+  </head>
+  <body>
+    <div class="container-navbar">
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <ul class="list-group list-group-horizontal">
+            <li class="">
+              <a href="index.html">
+                <img src="assets/images/brandred.png" alt=""
+              /></a>
+            </li>
+
+            <li class="">
+              <a href="index.html">
+                <h2>Home</h2>
+              </a>
+            </li>
+            <li class="">
+              <h6><b>My Project</b></h6>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <a href="contactMe.html">
+        <button type="button" class="btn btn-dark my-auto">
+          <span>Contact Me</span>
+        </button>
+      </a>
+    </div>
+    <div class="form-container mx-auto">
+      <h1><b>ADD MY PROJECT</b></h1>
+      <div class="mb-3">
+        <label for="project_name" class="form-label"
+          ><h4>Project Name</h4></label
+        >
+        <input
+          type="text"
+          class="shadow form-control"
+          id="project_name"
+          autocomplete="name"
+        />
+      </div>
+      <div class="mb-3 countdown">
+        <div class="startDate">
+          <label for="start" class="form-label"><h4>Start Date</h4></label>
+          <input
+            type="date"
+            class="shadow form-control datePicker"
+            id="start"
+          />
+        </div>
+        <div class="endDate">
+          <label for="end" class="form-label"><h4>End Date</h4></label>
+          <input type="date" class="shadow form-control datePicker" id="end" />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label"><h4>Description</h4></label>
+        <textarea class="shadow form-control" id="message" rows="5"></textarea>
+      </div>
+      <div class="mb-3">
+        <h4>Technology</h4>
+        <div class="fourSelect">
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input mt-2 shadow"
+              type="checkbox"
+              id="Checkbox1"
+              value="option1"
+            />
+            <label class="form-check-label" for="Checkbox1">1</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input mt-2 shadow"
+              type="checkbox"
+              id="Checkbox2"
+              value="option2"
+            />
+            <label class="form-check-label" for="Checkbox2"
+              ><span>ini nomer 2</span></label
+            >
+          </div>
+        </div>
+        <div class="fourSelectDown">
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input mt-2 shadow"
+              type="checkbox"
+              id="Checkbox3"
+              value="option3"
+            />
+            <label class="form-check-label" for="Checkbox3">3</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input mt-2 shadow"
+              type="checkbox"
+              id="Checkbox4"
+              value="option4"
+            />
+            <label class="form-check-label" for="Checkbox4"
+              ><span>ini nomer 4</span></label
+            >
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <h4>Upload Image</h4>
+        <div class="input-group">
+          <input
+            type="file"
+            class="form-control"
+            id="inputGroupFile04"
+            aria-describedby="inputGroupFileAddon04"
+            aria-label="Upload"
+          />
+          <button
+            class="btn btn-outline-secondary fileReader"
+            type="button"
+            id="inputGroupFileAddon04"
+          >
+            Button
+          </button>
+        </div>
+      </div>
+      <a href="...">
+        <button
+          onclick="form_js(event)"
+          type="input"
+          class="btn btn-dark"
+          id="submit"
+        >
+          <span><b>Submit</b></span>
+        </button>
+      </a>
+    </div>
+
+    <div class="containerMyProject">
+      <h1>MY PROJECT</h1>
+      <div class="containerCardProject mx-auto">
+        <div class="card" style="width: 18rem">
+          <img
+            src="assets/images/brandred.png"
+            class="card-img-top mx-auto"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Dumbways Mobile App - 2021</h5>
+            <p class="card-text">durasi: 3 bulan</p>
+
+            <span class="card-text">
+              App that used for dumbways student, it was deployed and can
+              downloaded on playstore. <br />Happy download
+            </span>
+
+            <div class="cardMyProject">
+              <ul class="list-group list-group-horizontal gap-4">
+                <li>
+                  <a href=""
+                    ><img
+                      class="cardMyProjectIcon"
+                      src="assets/images/playstore.png"
+                      alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href=""
+                    ><img
+                      class="cardMyProjectIcon"
+                      src="assets/images/android.png"
+                      alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href=""
+                    ><img
+                      class="cardMyProjectIcon"
+                      src="assets/images/java.png"
+                      alt=""
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="container-Button">
+              <a href="#" class="btn btn-primary btn-dark btn-cardMyProjectEdit"
+                >edit</a
+              >
+              <a
+                href="#"
+                class="btn btn-primary btn-dark btn-cardMyProjectDelete"
+                >delete</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/Javascrip/form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      flatpickr(".datePicker", {
+        dateFormat: "d M Y", // format tanggal: 07 Mei 2025
+      });
+    </script>
+  </body>
+</html>
