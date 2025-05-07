@@ -7,8 +7,17 @@ function form_js(event) {
   const subject = document.getElementById("subject").value;
   const message = document.getElementById("message").value;
 
-  console.log(name, email, phone, subject, message);
+  if (!name && !email && !phone && !subject && !message) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Something went wrong!",
+      footer: '<a href="#">Why do I have this issue?</a>',
+    });
+    return;
+  }
 
+  console.log(name, email, phone, subject, message);
   Swal.fire({
     title: "Good job!",
     text: "You clicked the button!",
