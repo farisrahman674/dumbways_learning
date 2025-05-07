@@ -77,8 +77,12 @@
         </div>
       </div>
       <div class="mb-3">
-        <label for="message" class="form-label"><h4>Description</h4></label>
-        <textarea class="shadow form-control" id="message" rows="5"></textarea>
+        <label for="description" class="form-label"><h4>Description</h4></label>
+        <textarea
+          class="shadow form-control"
+          id="description"
+          rows="5"
+        ></textarea>
       </div>
       <div class="mb-3">
         <h4>Technology</h4>
@@ -87,20 +91,24 @@
             <input
               class="form-check-input mt-2 shadow"
               type="checkbox"
+              name="technology"
               id="Checkbox1"
-              value="option1"
+              value="Node Js"
             />
-            <label class="form-check-label" for="Checkbox1">1</label>
+            <label class="form-check-label" for="Checkbox1"
+              ><b>Node Js</b></label
+            >
           </div>
           <div class="form-check form-check-inline">
             <input
               class="form-check-input mt-2 shadow"
               type="checkbox"
+              name="technology"
               id="Checkbox2"
-              value="option2"
+              value="Next js"
             />
             <label class="form-check-label" for="Checkbox2"
-              ><span>ini nomer 2</span></label
+              ><span><b>Next Js</b></span></label
             >
           </div>
         </div>
@@ -109,20 +117,24 @@
             <input
               class="form-check-input mt-2 shadow"
               type="checkbox"
+              name="technology"
               id="Checkbox3"
-              value="option3"
+              value="React Js"
             />
-            <label class="form-check-label" for="Checkbox3">3</label>
+            <label class="form-check-label" for="Checkbox3"
+              ><b>React Js</b></label
+            >
           </div>
           <div class="form-check form-check-inline">
             <input
               class="form-check-input mt-2 shadow"
               type="checkbox"
+              name="technology"
               id="Checkbox4"
-              value="option4"
+              value="TypeScript"
             />
             <label class="form-check-label" for="Checkbox4"
-              ><span>ini nomer 4</span></label
+              ><span><b>TypeScript</b></span></label
             >
           </div>
         </div>
@@ -133,22 +145,15 @@
           <input
             type="file"
             class="form-control"
-            id="inputGroupFile04"
+            id="image"
             aria-describedby="inputGroupFileAddon04"
             aria-label="Upload"
           />
-          <button
-            class="btn btn-outline-secondary fileReader"
-            type="button"
-            id="inputGroupFileAddon04"
-          >
-            Button
-          </button>
         </div>
       </div>
-      <a href="...">
+      <a href="">
         <button
-          onclick="form_js(event)"
+          onclick="myProject(event)"
           type="input"
           class="btn btn-dark"
           id="submit"
@@ -218,7 +223,7 @@
         </div>
       </div>
     </div>
-    <script src="assets/Javascrip/form.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
@@ -226,5 +231,7 @@
         dateFormat: "d M Y", // format tanggal: 07 Mei 2025
       });
     </script>
+    <script src="assets/Javascrip/form.js"></script>
+    <script src="assets/Javascrip/my_Project.js"></script>
   </body>
 </html>
