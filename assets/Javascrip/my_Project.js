@@ -13,7 +13,11 @@ function myProject(event) {
       dataSelect.push(checkbox.value);
     }
   });
+  // ambil data tanggal
+  const start = document.getElementById("start").value.trim();
+  const end = document.getElementById("end").value.trim();
 
+  const duration = calculateDuration(start, end);
   // ambil data gambar
   const dataImage = document.getElementById("image");
   const file = dataImage.files[0];
@@ -32,15 +36,14 @@ function myProject(event) {
 
       let datasProject = {
         nameProject: document.getElementById("project_name").value.trim(),
-        startDateProject: document.getElementById("start").value.trim(),
-        endDateProject: document.getElementById("end").value.trim(),
         descriptionProject: document.getElementById("description").value.trim(),
         selectedProject: dataSelect,
         imageProject: imgDefault,
+        projectDuration: duration,
       };
 
       projectData.push(datasProject);
-      // console.log(projectData);
+      console.log(projectData);
       cardInput();
     };
 
@@ -51,16 +54,49 @@ function myProject(event) {
 
     let datasProject = {
       nameProject: document.getElementById("project_name").value.trim(),
-      startDateProject: document.getElementById("start").value.trim(),
-      endDateProject: document.getElementById("end").value.trim(),
       descriptionProject: document.getElementById("description").value.trim(),
       selectedProject: dataSelect,
       imageProject: imgDefault,
+      projectDuration: duration,
     };
     projectData.push(datasProject);
-    // console.log(projectData);
+    console.log(projectData);
     cardInput();
   }
+}
+
+function calculateDuration(startDate, endDate) {
+  const start = new Date(startDate);
+  const end = new Date(endDate);
+  const timeDifference = Math.floor((end - start) / (1000 * 3600 * 24));
+
+  let result = "";
+
+  // Cek apakah durasi kurang dari 31 hari
+  if (timeDifference < 31) {
+    result = `durasi: ${timeDifference} Hari`; // Durasi dalam hari
+  }
+  // Cek apakah durasi lebih dari 31 hari, jadi bisa dihitung bulan
+  else if (timeDifference >= 31 && timeDifference <= 365) {
+    const totalMonths = Math.floor(timeDifference / 30); // Menghitung bulan
+    let remainingDays = timeDifference % 30;
+    result = `durasi: ${totalMonths} Bulan, ${remainingDays} Hari`; // Durasi dalam bulan
+  }
+  // Cek jika durasi lebih dari 365 hari, berarti lebih dari 1 tahun
+  else if (timeDifference > 365) {
+    const totalYears = Math.floor(timeDifference / 365); // Menghitung tahun
+    let remainingDays = timeDifference % 365; // Sisa hari setelah tahun
+
+    let remainingMonths = Math.floor(remainingDays / 30); // Menghitung bulan dari sisa hari
+    remainingDays = remainingDays % 30; // Sisa hari setelah bulan
+
+    // Menampilkan dalam format tahun, bulan, hari
+    result = `durasi: ${totalYears} Tahun, ${remainingMonths} Bulan, ${remainingDays} Hari`;
+  } else {
+    result = `durasi: 3 bulan`;
+  }
+
+  return result;
 }
 
 function cardInput() {
@@ -114,8 +150,8 @@ function cardInput() {
     <div class="containerCardProject">
       <div class="card" style="width: 18rem">
         <img
-          src="${project.imageProject || "assets/images/brandred.png"} "
-          class="card-img-top mx-auto"
+          src="${project.imageProject} "
+          class="card-img-top mx-auto cardImgTopProject"
           alt="..."
         />
         <div class="card-body">
@@ -124,15 +160,14 @@ function cardInput() {
               ? project.nameProject
               : "Dumbways Mobile App - 2021"
           }</h5>
-          <p class="card-text">durasi: 3 bulan</p>
+          <p class="card-text">${project.projectDuration}</p>
 
           <span class="card-text">
           ${
             project.descriptionProject
               ? project.descriptionProject
-              : "App that used for dumbways student, it was deployed and can downloaded on playstore. "
-          }
-            <br />Happy download
+              : "App that used for dumbways student, it was deployed and can downloaded on playstore. <br />Happy download "
+          }           
           </span>
 
           <div class="cardMyProject">
