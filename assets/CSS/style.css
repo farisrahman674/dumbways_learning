@@ -264,6 +264,16 @@ article {
   width: 100%;
   background-color: white;
 }
+
+#cardContent {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 .containerMyProject h1 {
   text-align: center;
   padding: 50px 0px;
@@ -272,6 +282,7 @@ article {
   border-radius: 15px;
   margin: 10px 5px 0px;
   width: 250px;
+  height: 200px;
 }
 .card-body h5 {
   margin-top: 5px;
@@ -286,8 +297,8 @@ article {
   font-size: 12px;
 }
 .containerCardProject {
+  margin-left: 40px;
   display: flex;
-  width: 80%;
 }
 .cardMyProject {
   margin-top: 30px;

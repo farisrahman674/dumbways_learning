@@ -64,7 +64,7 @@
       </div>
       <div class="mb-3 countdown">
         <div class="startDate">
-          <label for="start" class="form-label"><h4>Start Date</h4></label>
+          <label class="form-label"><h4>Start Date</h4></label>
           <input
             type="date"
             class="shadow form-control datePicker"
@@ -72,7 +72,7 @@
           />
         </div>
         <div class="endDate">
-          <label for="end" class="form-label"><h4>End Date</h4></label>
+          <label class="form-label"><h4>End Date</h4></label>
           <input type="date" class="shadow form-control datePicker" id="end" />
         </div>
       </div>
@@ -93,7 +93,7 @@
               type="checkbox"
               name="technology"
               id="Checkbox1"
-              value="Node Js"
+              value="Node_Js"
             />
             <label class="form-check-label" for="Checkbox1"
               ><b>Node Js</b></label
@@ -105,7 +105,7 @@
               type="checkbox"
               name="technology"
               id="Checkbox2"
-              value="Next js"
+              value="Next_js"
             />
             <label class="form-check-label" for="Checkbox2"
               ><span><b>Next Js</b></span></label
@@ -119,7 +119,7 @@
               type="checkbox"
               name="technology"
               id="Checkbox3"
-              value="React Js"
+              value="React_Js"
             />
             <label class="form-check-label" for="Checkbox3"
               ><b>React Js</b></label
@@ -162,67 +162,7 @@
         </button>
       </a>
     </div>
-
-    <div class="containerMyProject">
-      <h1>MY PROJECT</h1>
-      <div class="containerCardProject mx-auto">
-        <div class="card" style="width: 18rem">
-          <img
-            src="assets/images/brandred.png"
-            class="card-img-top mx-auto"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Dumbways Mobile App - 2021</h5>
-            <p class="card-text">durasi: 3 bulan</p>
-
-            <span class="card-text">
-              App that used for dumbways student, it was deployed and can
-              downloaded on playstore. <br />Happy download
-            </span>
-
-            <div class="cardMyProject">
-              <ul class="list-group list-group-horizontal gap-4">
-                <li>
-                  <a href=""
-                    ><img
-                      class="cardMyProjectIcon"
-                      src="assets/images/playstore.png"
-                      alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a href=""
-                    ><img
-                      class="cardMyProjectIcon"
-                      src="assets/images/android.png"
-                      alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a href=""
-                    ><img
-                      class="cardMyProjectIcon"
-                      src="assets/images/java.png"
-                      alt=""
-                  /></a>
-                </li>
-              </ul>
-            </div>
-            <div class="container-Button">
-              <a href="#" class="btn btn-primary btn-dark btn-cardMyProjectEdit"
-                >edit</a
-              >
-              <a
-                href="#"
-                class="btn btn-primary btn-dark btn-cardMyProjectDelete"
-                >delete</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="cardJs"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
