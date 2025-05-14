@@ -119,7 +119,7 @@ function cardInput() {
     TypeScript: "assets/images/typescript.png",
   };
 
-  projectData.forEach((project) => {
+  const mapCard = projectData.map((project) => {
     const iconsToShow =
       project.selectedProject.length === 0
         ? Object.keys(iconNotfound)
@@ -146,7 +146,7 @@ function cardInput() {
       })
       .join("");
 
-    cardContentMain.innerHTML += `
+    return `
     <div class="containerCardProject">
       <div class="card" style="width: 18rem">
         <img
@@ -189,4 +189,5 @@ function cardInput() {
       </div>
     </div>`;
   });
+  cardContentMain.innerHTML = mapCard.join("");
 }
