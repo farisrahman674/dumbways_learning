@@ -239,6 +239,12 @@ async function updateMyProject(req, res) {
 async function updatedData(req, res) {
   try {
     const id = req.params.id_Project;
+    let { technology } = req.body;
+    const technologies = Array.isArray(technology)
+      ? technology
+      : technology
+      ? [technology]
+      : ["Node_Js", "Next_js", "React_Js"];
     const image = req.file
       ? `/assets/uploads/${req.file.filename}`
       : req.body.oldimg;
@@ -256,7 +262,7 @@ async function updatedData(req, res) {
     const values = [
       req.body.project_name,
       req.body.description,
-      req.body.technology,
+      technologies,
       req.body.start,
       req.body.end,
       image,
