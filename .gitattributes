@@ -1,0 +1,10 @@
+# Atur agar semua file teks pakai LF di Git repo
+* text=auto
+
+# Secara eksplisit atur beberapa jenis file pakai LF
+*.js text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.hbs text eol=lf

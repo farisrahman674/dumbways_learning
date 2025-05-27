@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faris Rahman</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="/assets/CSS/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body><div class="container-navbar">
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <ul class="list-group list-group-horizontal">
+            <li class="">
+              <a href="/">
+                <img src="/assets/images/brandred.png" alt="" /></a>
+            </li>
+
+            <li class="">
+              <a href="/">
+                <h2>
+                  {{#if isHome}}
+                    <b>Home</b>
+                  {{else}}
+                    Home
+                  {{/if}}
+                </h2>
+              </a>
+            </li>
+            <li class="">
+              <a href="/myProject"><h6>
+                  {{#if isMyProject}}
+                    <b>My Project</b>
+                  {{else}}
+                    My Project
+                  {{/if}}
+
+                </h6></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <a href="/contactMe">
+        <button type="button" class="btn btn-dark my-auto">
+          <span>Contact Me</span>
+        </button>
+      </a>
+    </div>
+    {{{body}}}
+  </body>
+</html>

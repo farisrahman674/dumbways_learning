@@ -1,0 +1,62 @@
+<div class="form-container mx-auto">
+  <h1>GET IN TOUCH</h1>
+  <div class="mb-3">
+    <label for="name" class="form-label"><b>Name</b></label>
+    <input
+      type="text"
+      class="shadow form-control"
+      id="name"
+      placeholder="Jhon Doe"
+      autocomplete="name"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label"><b>Email address</b></label>
+    <input
+      type="email"
+      class="shadow form-control"
+      id="email"
+      placeholder="name@example.com"
+      autocomplete="email"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label"><b>Phone Number</b></label>
+    <input
+      type="tel"
+      class="shadow form-control"
+      id="phone"
+      placeholder="12345678"
+      autocomplete="tel"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="subject" class="form-label"><b>Subject</b></label>
+    <select
+      id="subject"
+      class="shadow form-select"
+      aria-label="Default select example"
+    >
+      <option selected></option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="message" class="form-label">Your Message</label>
+    <textarea class="shadow form-control" id="message" rows="5"></textarea>
+  </div>
+  <div class="buttonSubmit">
+    <button
+      onclick="form_js(event)"
+      type="input"
+      class="btn btn-dark"
+      id="submit"
+    >
+      <span><b>Submit</b></span>
+    </button>
+  </div>
+</div>
+
+<script src="./assets/Javascrip/form.js"></script>

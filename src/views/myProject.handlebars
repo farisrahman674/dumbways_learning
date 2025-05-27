@@ -1,0 +1,164 @@
+<div class="form-container mx-auto">
+  <h1><b>ADD MY PROJECT</b></h1>
+  <form action="/myProject" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="project_name" class="form-label"><h4>Project Name</h4></label>
+      <input
+        type="text"
+        class="shadow form-control"
+        id="project_name"
+        name="project_name"
+      />
+    </div>
+    <div class="mb-3 countdown">
+      <div class="startDate">
+        <label class="form-label"><h4>Start Date</h4></label>
+        <input
+          type="date"
+          class="shadow form-control datePicker"
+          id="start"
+          name="start"
+        />
+      </div>
+      <div class="endDate">
+        <label class="form-label"><h4>End Date</h4></label>
+        <input
+          type="date"
+          class="shadow form-control datePicker"
+          id="end"
+          name="end"
+        />
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label"><h4>Description</h4></label>
+      <textarea
+        class="shadow form-control"
+        id="description"
+        name="description"
+        rows="5"
+      ></textarea>
+    </div>
+    <div class="mb-3">
+      <h4>Technology</h4>
+      <div class="fourSelect">
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input mt-2 shadow"
+            type="checkbox"
+            name="technology"
+            id="Checkbox1"
+            value="Node_Js"
+          />
+          <label class="form-check-label" for="Checkbox1"><b>Node Js</b></label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input mt-2 shadow"
+            type="checkbox"
+            name="technology"
+            id="Checkbox2"
+            value="Next_js"
+          />
+          <label class="form-check-label" for="Checkbox2"><span><b>Next Js</b></span></label>
+        </div>
+      </div>
+      <div class="fourSelectDown">
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input mt-2 shadow"
+            type="checkbox"
+            name="technology"
+            id="Checkbox3"
+            value="React_Js"
+          />
+          <label class="form-check-label" for="Checkbox3"><b>React Js</b></label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input mt-2 shadow"
+            type="checkbox"
+            name="technology"
+            id="Checkbox4"
+            value="TypeScript"
+          />
+          <label class="form-check-label" for="Checkbox4"><span><b
+              >TypeScript</b></span></label>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <h4>Upload Image</h4>
+      <div class="input-group">
+        <input
+          type="file"
+          accept="image/*"
+          class="form-control"
+          id="image"
+          name="image"
+          aria-describedby="inputGroupFileAddon04"
+          aria-label="Upload"
+        />
+      </div>
+    </div>
+    <div class="buttonSubmit">
+      <button type="submit" class="btn btn-dark" id="submit">
+        <span><b>Submit</b></span>
+      </button>
+    </div>
+  </form>
+</div>
+<div id="cardJs" class="containerMyProject">
+  <h1>MY PROJECT</h1>
+  <div id="cardContent">
+    {{#each result}}
+      <div class="containerCardProject">
+        <div class="card" style="width: 18rem">
+          <a href="/detail/{{this.project.id_Project}}">
+            <img
+              src="{{this.project.image}}"
+              class="card-img-top mx-auto cardImgTopProject"
+              alt="..."
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">{{this.project.project_name}}</h5>
+            <p class="card-text">{{this.duration}}</p>
+
+            <span class="card-text">
+              {{this.project.description}}
+              <br />Happy download
+            </span>
+
+            <div class="cardMyProject">
+              <ul class="list-group list-group-horizontal gap-4">
+                {{#each icons}}
+                  <li>
+                    <a href="">
+                      <img src="{{this}}" class="cardMyProjectIcon" alt="" />
+                    </a>
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
+
+            <div class="container-Button">
+              <a
+                href="/updateMyProject/{{this.project.id_Project}}"
+                class="btn btn-primary btn-dark btn-cardMyProjectEdit"
+              >edit</a>
+              <a
+                href="/deleted/{{this.project.id_Project}}"
+                onclick="deletedAlert(event, this)"
+                class="btn btn-primary btn-dark btn-cardMyProjectDelete"
+              >delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+<script src="/assets/Javascrip/datepicker.js"></script>
+<script src="/assets/Javascrip/deletedAlert.js"></script>

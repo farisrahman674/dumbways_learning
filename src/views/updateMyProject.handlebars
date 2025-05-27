@@ -1,0 +1,121 @@
+<div class="form-container mx-auto">
+  <h1><b>EDIT MY PROJECT</b></h1>
+  <form action="/update/{{project.id_Project}}" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="project_name" class="form-label"><h4>Project Name</h4></label>
+      <input
+        type="text"
+        class="shadow form-control"
+        id="project_name"
+        name="project_name"
+        value="{{project.project_name}}"
+      />
+    </div>
+    <div class="mb-3 countdown">
+      <div class="startDate">
+        <label class="form-label"><h4>Start Date</h4></label>
+        <input
+          type="date"
+          class="shadow form-control datePicker"
+          id="start"
+          name="start"
+          value="{{project.start_date}}"
+        />
+      </div>
+      <div class="endDate">
+        <label class="form-label"><h4>End Date</h4></label>
+        <input
+          type="date"
+          class="shadow form-control datePicker"
+          id="end"
+          name="end"
+          value="{{project.end_date}}"
+        />
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label"><h4>Description</h4></label>
+      <textarea
+        class="shadow form-control"
+        id="description"
+        name="description"
+        rows="5"
+      >{{project.description}}</textarea>
+    </div>
+    <div class="mb-3">
+      <h4>Technology</h4>
+      <div class="fourSelect">
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input mt-2 shadow"
+            type="checkbox"
+            name="technology"
+            id="Checkbox1"
+            value="Node_Js"
+            {{#if checkboxStates.Node_Js}}checked{{/if}}
+          />
+          <label class="form-check-label" for="Checkbox1"><b>Node Js</b></label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input mt-2 shadow"
+            type="checkbox"
+            name="technology"
+            id="Checkbox2"
+            value="Next_js"
+           {{#if checkboxStates.Next_js}}checked{{/if}}
+          />
+          <label class="form-check-label" for="Checkbox2"><span><b>Next Js</b></span></label>
+        </div>
+      </div>
+      <div class="fourSelectDown">
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input mt-2 shadow"
+            type="checkbox"
+            name="technology"
+            id="Checkbox3"
+            value="React_Js"
+            {{#if checkboxStates.React_Js}}checked{{/if}}
+          />
+          <label class="form-check-label" for="Checkbox3"><b>React Js</b></label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input mt-2 shadow"
+            type="checkbox"
+            name="technology"
+            id="Checkbox4"
+            value="TypeScript"
+            {{#if checkboxStates.TypeScript}}checked{{/if}}
+          />
+          <label class="form-check-label" for="Checkbox4"><span><b
+              >TypeScript</b></span></label>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <h4>Upload Image</h4>
+      <div class="input-group">
+        <input
+          type="file"
+          accept="image/*"
+          class="form-control"
+          id="image"
+          name="image"
+          aria-describedby="inputGroupFileAddon04"
+          aria-label="Upload"
+        />
+      </div>
+      <input type="hidden" name="oldimg" id="" value="{{project.image}}">
+    </div>
+    <div class="buttonSubmit">
+      <button type="submit" class="btn btn-dark" id="submit">
+        <span><b>Submit</b></span>
+      </button>
+    </div>
+  </form>
+</div>
+
+<script src="/assets/Javascrip/datepicker.js">
+</script>

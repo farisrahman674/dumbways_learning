@@ -1,0 +1,24 @@
+{
+  "name": "task-express-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.3",
+    "flatpickr": "^4.6.13",
+    "handlebars": "^4.7.8",
+    "multer": "^2.0.0",
+    "pg": "^8.16.0",
+    "uuid": "^11.1.0"
+  }
+}

@@ -1,0 +1,105 @@
+<div class="detail-container">
+  <h1><b>{{project.project_name}}</b></h1>
+  <div class="containerDetailContent">
+    <div class="topContent mx-auto">
+      <div class="topContentLeft my-auto">
+        <img src="{{project.image}}" class="mx-auto" alt="" />
+      </div>
+      <div class="topContentRight my-auto">
+        <h4>Duration</h4>
+        <div class="startUntilEndDate"><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="currentColor"
+            class="bi bi-calendar2-week-fill my-auto"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5m9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5M8.5 7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM3 10.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"
+            />
+          </svg>
+          <p class="my-auto">{{projectData.startDate}}
+            -
+            {{projectData.endDate}}</p>
+        </div>
+        <div class="durationDate">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="currentColor"
+            class="bi bi-clock my-auto"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"
+            />
+            <path
+              d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"
+            />
+          </svg>
+          <p class="my-auto">{{projectData.duration}}</p>
+        </div>
+        <div class="tech">
+          <h4>Technologies</h4>
+          <div class="technology">
+            <div class="leftTech">
+              {{#each leftIcons}}
+                <div class="techOne">
+                  <img src="{{this.icon}}" class="cardMyProjectIcon" alt="" />
+                  <p>{{this.name}}</p>
+                </div>
+              {{/each}}
+            </div>
+            <div class="rightTech">
+              {{#each rightIcons}}
+                <div class="techOne">
+                  <img src="{{this.icon}}" class="cardMyProjectIcon" alt="" />
+                  <p>{{this.name}}</p>
+                </div>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottomContent mx-auto">
+      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+        faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
+        pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
+        tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+        Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit
+        semper vel class aptent taciti sociosqu. Ad litora torquent per conubia
+        nostra inceptos himenaeos.
+        <br />Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+        faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
+        pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
+        tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+        Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit
+        semper vel class aptent taciti sociosqu. Ad litora torquent per conubia
+        nostra inceptos himenaeos.
+        <br />Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+        faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
+        pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
+        tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+        Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit
+        semper vel class aptent taciti sociosqu. Ad litora torquent per conubia
+        nostra inceptos himenaeos.
+        <br />Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+        faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
+        pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
+        tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+        Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit
+        semper vel class aptent taciti sociosqu. Ad litora torquent per conubia
+        nostra inceptos himenaeos
+        <br />Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+        faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
+        pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
+        tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+        Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit
+        semper vel class aptent taciti sociosqu. Ad litora torquent per conubia
+        nostra inceptos himenaeos</p>
+    </div>
+  </div>
+</div>
